@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class SegmentedCollectionViewController: UIViewController {
+open class GTSegmentedCollectionViewController: UIViewController {
     
     public typealias Segment = (title: String, viewController: UIViewController)
 
@@ -149,7 +149,7 @@ public class SegmentedCollectionViewController: UIViewController {
     }
 
 }
-extension SegmentedCollectionViewController: UICollectionViewDataSource{
+extension GTSegmentedCollectionViewController: UICollectionViewDataSource{
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return segmentTitles.count
@@ -173,11 +173,11 @@ extension SegmentedCollectionViewController: UICollectionViewDataSource{
     
 }
 
-extension SegmentedCollectionViewController: UICollectionViewDelegate{
+extension GTSegmentedCollectionViewController: UICollectionViewDelegate{
     
 }
 
-extension SegmentedCollectionViewController: UICollectionViewDelegateFlowLayout{
+extension GTSegmentedCollectionViewController: UICollectionViewDelegateFlowLayout{
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         guard let frame = self.view.window?.frame else { return CGSize(width: 0.0, height: 0.0) }
@@ -189,7 +189,7 @@ extension SegmentedCollectionViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 
-extension SegmentedCollectionViewController: SegmentedControlDelegate{
+extension GTSegmentedCollectionViewController: SegmentedControlDelegate{
     
     internal var collectionViewXOffset: CGFloat {
         return collectionView.contentOffset.x
@@ -216,7 +216,7 @@ extension SegmentedCollectionViewController: SegmentedControlDelegate{
     
 }
 
-extension SegmentedCollectionViewController: UIScrollViewDelegate{
+extension GTSegmentedCollectionViewController: UIScrollViewDelegate{
     
  /*   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
   
