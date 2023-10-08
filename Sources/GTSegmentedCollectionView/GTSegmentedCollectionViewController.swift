@@ -26,7 +26,7 @@ open class GTSegmentedCollectionViewController: UIViewController {
     
     private var borderDrawn = false
     
-    public var segmentedControlConfiguration: SegmentedControlConfiguration = SegmentedControlConfiguration.defaultConfiguration{
+    public var segmentedControlConfiguration: GTSegmentedControlConfiguration = GTSegmentedControlConfiguration.defaultConfiguration{
         didSet{
             
             segmentedControl.applyConfiguration(config: segmentedControlConfiguration)
@@ -82,7 +82,7 @@ open class GTSegmentedCollectionViewController: UIViewController {
     }
     
 
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
          
         segmentHeight = segmentedControl.labelSize.height + segmentedControlConfiguration.selectorHeight
@@ -96,13 +96,13 @@ open class GTSegmentedCollectionViewController: UIViewController {
 
     }
     
-    public override func viewWillLayoutSubviews() {
+    open override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         collectionView.collectionViewLayout.invalidateLayout()
         segmentedControl.reloadLayout()
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -132,7 +132,7 @@ open class GTSegmentedCollectionViewController: UIViewController {
         
     }
     
-    private func drawBorderView(config: SegmentedControlConfiguration){
+    private func drawBorderView(config: GTSegmentedControlConfiguration){
         borderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         borderView.backgroundColor = config.segmentBorderColor
         borderView.translatesAutoresizingMaskIntoConstraints = false
@@ -218,13 +218,6 @@ extension GTSegmentedCollectionViewController: SegmentedControlDelegate{
 
 extension GTSegmentedCollectionViewController: UIScrollViewDelegate{
     
- /*   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-  
-    }
-    
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-    }*/
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         scrollOffset = scrollView.contentOffset

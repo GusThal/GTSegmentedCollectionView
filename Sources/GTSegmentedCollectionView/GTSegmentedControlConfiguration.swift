@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public struct SegmentedControlConfiguration{
+public struct GTSegmentedControlConfiguration{
     var selectorColor: UIColor
     var selectorHeight: CGFloat
     var selectorViewPosition: BarPosition
@@ -25,7 +25,7 @@ public struct SegmentedControlConfiguration{
     var segmentBorderWidth: CGFloat
     var segmentBorderColor: UIColor?
     
-    static let defaultConfiguration: SegmentedControlConfiguration = SegmentedControlConfiguration(selectorColor: .systemBlue, selectorHeight: 1.0, selectorViewPosition: .bottom, selectedBackgroundColor: .systemBackground, selectedTextColor: .label, deselectedBackgroundColor: .systemBackground, deselectedTextColor: .gray, textAlignment: .center, font: UIFont.systemFont(ofSize: 14), segmentBorderWidth: 0.5, segmentBorderColor: .lightGray)
+    static let defaultConfiguration: GTSegmentedControlConfiguration = GTSegmentedControlConfiguration(selectorColor: .systemBlue, selectorHeight: 1.0, selectorViewPosition: .bottom, selectedBackgroundColor: .systemBackground, selectedTextColor: .label, deselectedBackgroundColor: .systemBackground, deselectedTextColor: .gray, textAlignment: .center, font: UIFont.systemFont(ofSize: 14), segmentBorderWidth: 0.5, segmentBorderColor: .lightGray)
     
     
     

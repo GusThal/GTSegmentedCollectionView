@@ -38,7 +38,7 @@ internal class SegmentedControlCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-     func applyConfiguration(isSelected: Bool, config: SegmentedControlConfiguration){
+     func applyConfiguration(isSelected: Bool, config: GTSegmentedControlConfiguration){
         
         if isSelected{
             label.textColor = config.selectedTextColor

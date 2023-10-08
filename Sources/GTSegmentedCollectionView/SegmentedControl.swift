@@ -22,13 +22,13 @@ internal class SegmentedControl: UIView {
     
     private var selectorView = UIView()
     
-    private var selectorColor = SegmentedControlConfiguration.defaultConfiguration.selectorColor{
+    private var selectorColor = GTSegmentedControlConfiguration.defaultConfiguration.selectorColor{
         didSet{
             selectorView.backgroundColor = selectorColor
         }
     }
     
-    private var configuration = SegmentedControlConfiguration.defaultConfiguration
+    private var configuration = GTSegmentedControlConfiguration.defaultConfiguration
     
     internal private(set) var labelSize: CGSize = CGSize(width: 0.0, height: 0.0)
     
@@ -95,14 +95,14 @@ internal class SegmentedControl: UIView {
     }
     
     
-    func setTitles(titles: [String], config: SegmentedControlConfiguration){
+    func setTitles(titles: [String], config: GTSegmentedControlConfiguration){
         self.titles = titles
   
         collectionView.reloadData()
         
     }
     
-    private func setLabelSize(titles: [String], config: SegmentedControlConfiguration){
+    private func setLabelSize(titles: [String], config: GTSegmentedControlConfiguration){
         
         labelSize = getLabelSize(titles: titles, config: config)
         collectionView.heightAnchor.constraint(equalToConstant: labelSize.height).isActive = true
@@ -171,7 +171,7 @@ internal class SegmentedControl: UIView {
         
     }
     
-    internal func applyConfiguration(config: SegmentedControlConfiguration){
+    internal func applyConfiguration(config: GTSegmentedControlConfiguration){
         
         configuration = config
         
@@ -365,7 +365,7 @@ extension SegmentedControl: SegmentedControlCollectionViewLayoutDelegate{
         return labelSize
     }
     
-    func getLabelSize(titles: [String], config: SegmentedControlConfiguration) -> CGSize{
+    func getLabelSize(titles: [String], config: GTSegmentedControlConfiguration) -> CGSize{
         let font = config.font
         
         guard var screenWidth = collectionView.window?.frame.width else { return CGSize(width: 0.0, height: 0.0)}
