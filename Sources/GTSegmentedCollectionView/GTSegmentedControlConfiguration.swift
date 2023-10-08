@@ -27,10 +27,22 @@ public struct GTSegmentedControlConfiguration{
     
     static let defaultConfiguration: GTSegmentedControlConfiguration = GTSegmentedControlConfiguration(selectorColor: .systemBlue, selectorHeight: 1.0, selectorViewPosition: .bottom, selectedBackgroundColor: .systemBackground, selectedTextColor: .label, deselectedBackgroundColor: .systemBackground, deselectedTextColor: .gray, textAlignment: .center, font: UIFont.systemFont(ofSize: 14), segmentBorderWidth: 0.5, segmentBorderColor: .lightGray)
     
+    public init(selectorColor: UIColor, selectorHeight: CGFloat, selectorViewPosition: BarPosition, selectedBackgroundColor: UIColor, selectedTextColor: UIColor, deselectedBackgroundColor: UIColor, deselectedTextColor: UIColor, textAlignment: NSTextAlignment, font: UIFont, segmentBorderWidth: CGFloat, segmentBorderColor: UIColor? = nil) {
+        self.selectorColor = selectorColor
+        self.selectorHeight = selectorHeight
+        self.selectorViewPosition = selectorViewPosition
+        self.selectedBackgroundColor = selectedBackgroundColor
+        self.selectedTextColor = selectedTextColor
+        self.deselectedBackgroundColor = deselectedBackgroundColor
+        self.deselectedTextColor = deselectedTextColor
+        self.textAlignment = textAlignment
+        self.font = font
+        self.segmentBorderWidth = segmentBorderWidth
+        self.segmentBorderColor = segmentBorderColor
+    }
     
     
-    
-    enum BarPosition{
+    public enum BarPosition{
         case top, bottom
     }
     
