@@ -4,6 +4,10 @@ A dependency-free Swift package for iOS inspired by Twitter/X and TikTok’s hom
 
 A horizontal paging UICollectionView linked to a custom Segmented Control, where each CollectionView Cell contains an embedded UIViewController that corresponds to a Segment in the Segmented Control. Pressing a Segment scrolls the CollectionView to the corresponding ViewController Cell, and paging the CollectionView updates the Segmented Control accordingly.
 
+
+https://github.com/GusThal/GTSegmentedCollectionView/assets/25615604/ee7514be-3fb3-4851-bf6e-de8a4bccc651
+
+
 ## Features
 - Infinite number of segments
 - customize the height and width of the Segmented Control's selector view, and position it on either the top or bottom.
