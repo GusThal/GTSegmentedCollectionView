@@ -1,4 +1,4 @@
-# GTSegmentedControl
+# GTSegmentedCollectionView
 
 A dependency-free Swift package for iOS inspired by Twitter/X and TikTok’s home screens. 
 
