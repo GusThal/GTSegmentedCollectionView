@@ -17,7 +17,7 @@ https://github.com/GusThal/GTSegmentedCollectionView/assets/25615604/ee7514be-3f
 - Built in default configuration for easy setup.
 
 ## Requirements
-- iOS 16+
+- iOS 17+
 - Swift 5.9+
 
 ## Installation
