@@ -370,7 +370,7 @@ extension SegmentedControl: SegmentedControlCollectionViewLayoutDelegate{
         
         guard var screenWidth = collectionView.window?.frame.width else { return CGSize(width: 0.0, height: 0.0)}
         
-        screenWidth = screenWidth - (collectionView.layoutMargins.left * 2)
+//        screenWidth = screenWidth - (collectionView.layoutMargins.left * 2)
         
         var maxWidth = CGFloat(integerLiteral: 0)
         var maxHeight = CGFloat(integerLiteral: 0)
@@ -394,7 +394,7 @@ extension SegmentedControl: SegmentedControlCollectionViewLayoutDelegate{
         }
 
         //threw an extra 5% on the labels because some were being cut off.
-        maxWidth = maxWidth * CGFloat(1.05)
+//        maxWidth = maxWidth * CGFloat(1.05)
         
         return CGSize(width: maxWidth, height: maxHeight)
         
